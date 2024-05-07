@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Group B Piala Asia Qatar U-23</title>
+    <!-- Memanggil library Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+        }
+        table th {
+            background-color: #343a40;
+            color: #fff;
+        }
+        table td, table th {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Data Group B Piala Asia Qatar U-23</h2>
+
+        <form method="post" action="process.php">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="nama_negara" class="form-label">Nama Negara:</label>
+                    <select id="nama_negara" name="nama_negara" class="form-select">
+                        <option value="Korea Selatan U-23">Korea Selatan U-23</option>
+                        <option value="Jepang U-23">Jepang U-23</option>
+                        <option value="Tiongkok U-23">Tiongkok U-23</option>
+                        <option value="Uni Emirat Arab U-23">Uni Emirat Arab U-23</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="jumlah_pertandingan" class="form-label">Jumlah Pertandingan:</label>
+                    <input type="text" id="jumlah_pertandingan" name="jumlah_pertandingan" class="form-control">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="jumlah_menang" class="form-label">Jumlah Menang:</label>
+                    <input type="text" id="jumlah_menang" name="jumlah_menang" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label for="jumlah_seri" class="form-label">Jumlah Seri:</label>
+                    <input type="text" id="jumlah_seri" name="jumlah_seri" class="form-control">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="jumlah_kalah" class="form-label">Jumlah Kalah:</label>
+                    <input type="text" id="jumlah_kalah" name="jumlah_kalah" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label for="jumlah_poin" class="form-label">Jumlah Poin:</label>
+                    <input type="text" id="jumlah_poin" name="jumlah_poin" class="form-control">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="nama_operator" class="form-label">Nama Operator:</label>
+                    <input type="text" id="nama_operator" name="nama_operator" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label for="nim_mahasiswa" class="form-label">NIM Mahasiswa:</label>
+                    <input type="text" id="nim_mahasiswa" name="nim_mahasiswa" class="form-control">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <br>
+
+        <!-- Menampilkan data dari db.html -->
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nama Operator/NIM</th>
+                    <th>Negara</th>
+                    <th>P</th>
+                    <th>M</th>
+                    <th>S</th>
+                    <th>K</th>
+                    <th>Poin</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php include 'db.html'; ?>
+            </tbody>
+        <tr>
+<td>jefryanus/211011401823</td>
+<td>Korea Selatan U-23</td>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>9</td>
+</tr>
+<tr>
+<td>M.kurniawan/211011400913</td>
+<td>Jepang U-23</td>
+<td></td>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+<td>10</td>
+</tr>
+</table>
+    </div>
+
+    <!-- Memanggil library Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
